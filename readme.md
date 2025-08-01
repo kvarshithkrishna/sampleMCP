@@ -177,11 +177,11 @@ MONGODB_DB_NAME=""
 MONGODB_EMBEDDING_MODEL_COLLECTION_NAME="embedding-models"
 ```
 
-2. **Run the service:**
+2. **Run the service using Docker:**
 
 ```sh
-cd utility_services/embedding_model_service
-python server.py
+docker build -t testing_services .
+docker run -p 5001:5001 -p 5002:5002 -p 5004:5004 testing_services
 ```
 
 3. **Test the endpoints:**
